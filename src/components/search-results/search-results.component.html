@@ -1,0 +1,12 @@
+<ion-item *ngIf="user" text-wrap>
+  <ion-avatar item-left>
+    <img [src]="user.avatar_url" alt="user avatar">
+  </ion-avatar>
+  <h2>{{user?.name}}</h2>
+  <h3>{{user?.company}}</h3>
+  <p>{{user?.location}}</p>
+  <p text-wrap>{{user?.bio}}</p>
+</ion-item>
+<ion-item *ngIf="!user">
+  <p text-wrap>No users such user.</p>
+</ion-item>
